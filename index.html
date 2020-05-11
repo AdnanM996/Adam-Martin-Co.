@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&M - Home Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="header">
+    <div class="wrapper">
+
+        
+        <a href="index.html" class="logo logo--black">A &amp; M CO.</a>
+       
+
+        <div class="menu">
+            <div class="menu--line"></div>
+            <div class="menu--line"></div>
+        </div>
+
+        <div class="menu--active">
+            <div class="menu--active--line menu--active--line--1"></div>
+            <div class="menu--active--line menu--active--line--2"></div>
+        </div>
+
+    </div><!--end wrapper-->
+</header>
+
+<section class="hero">
+    <div class="grid">
+
+        <div class="grid__item grid__item--1">
+
+            <div class="wrapper">
+                <h1 class="heading heading--big intro--text">Modern,<br>
+                    ecological <br>
+                    aware houses.
+                </h1>
+            
+            <a href="#" class="cta cta--intro" style="width: 20rem;">competed projects</a>
+
+        </div>
+
+        </div><!--end grid__item-->
+
+        <div class="grid__item grid__item--2">
+
+                <div class="slideshow-container">
+
+                    <div class="slide fade-in">
+                        <img src="images/img1.jpg" alt="">
+                    </div>
+
+                    <div class="slide fade-in">
+                        <img src="images/img2.jpg" alt="">
+                    </div>
+
+                    <div class="slide fade-in">
+                        <img src="images/img3.jpg" alt="">
+                    </div>
+                </div><!--end slideshow-container-->
+
+        </div><!--end grid__item-->
+
+    </div><!--end grid-->
+</section><!--end hero-->
+
+<section class="text__section">
+    <div class="wrapper">
+
+        <h2 class="heading heading--medium">Great homes begin with great relationships.</h2>
+        <p class="paragraph paragraph--large">Throughout the design process, we collaborate with each client to gain an understanding of their unique needs – defining the success of each building.</p>
+
+    </div><!--end wrapper-->
+</section><!--end text__section-->
+
+<section class="selected-projects">
+    <div class="wrapper">
+        <h2>selected projects</h2>
+
+        <div class="container">
+
+            <div class="container__item">
+                <a href="#"><img src="images/img1.jpg" alt=""></a>
+                <a href="#" class="cta">project 1</a>
+            </div>
+
+            <div class="container__item">
+                <a href="#"><img src="images/img2.jpg" alt=""></a>
+                <a href="#" class="cta">project 2</a>
+            </div>
+
+            <div class="container__item">
+                <a href="#"><img src="images/img3.jpg" alt=""></a>
+                <a href="#" class="cta">project 3</a>
+            </div>
+
+            <div class="container__item">
+                <a href="#"><img src="images/img4.jpg" alt=""></a>
+                <a href="#" class="cta">project 4</a>
+            </div>
+
+            <div class="container__item">
+                <a href="#"><img src="images/img5.jpg" alt=""></a>
+                <a href="#" class="cta">project 5</a>
+            </div>
+
+            <div class="container__item">
+                <a href="#"><img src="images/img6.jpg" alt=""></a>
+                <a href="#" class="cta">project 6</a>
+            </div>
+
+            <div class="container__item">
+                <a href="#"><img src="images/img7.jpg" alt=""></a>
+                <a href="#" class="cta">project 7</a>
+            </div>
+
+        </div><!--end container-->
+
+    </div><!--end wrapper-->
+</section>
+
+<section class="link-section">
+    <div class="wrapper">
+        <a href="#" class="cta">completed projects</a>
+        <a href="#" class="cta">active projects</a>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="wrapper">
+
+        <div class="footer--top">
+
+            <div class="footer__item">
+                <h1 class="heading heading--extra--large">A&M</h1>
+                <h1 class="heading heading--small">At home with nature.</h1>
+            </div>
+
+            <div class="footer__item">
+                <p class="name">Adam Parker</p>
+                <a href="mailto:#" class="email">adam@gmail.com</a>
+                <p class="phone">+123 456 789</p>
+            </div>
+
+            <div class="footer__item">
+                <p class="name">Martin Rhodes</p>
+                <a href="mailto:#" class="email">martin@gmail.com</a>
+                <p class="phone">+123 456 789</p>
+            </div>
+
+        </div><!--end footer--top-->
+
+        <div class="footer--bottom">
+            <p>&copy; Copyright <span id="year"></span> A&M</p>
+            <p>All right reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<nav class="nav">
+    <div class="wrapper">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">projects</a></li>
+            <li><a href="#">process</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </div>
+</nav>
+<script src="js/index.js"></script>
+<script>
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.querySelectorAll('.slide');
+
+        for(let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+
+        slideIndex++;
+
+        if(slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = 'block';
+        setTimeout(showSlides, 5000);
+    }
+
+    let container = document.querySelector('.selected-projects .container');
+    let containerItems = document.querySelectorAll('.selected-projects .container__item');
+
+    
+</script>
+</body>
+</html>

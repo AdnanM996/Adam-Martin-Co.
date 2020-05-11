@@ -1,0 +1,109 @@
+.hero {
+    overflow: hidden;
+    padding-top: 7.5rem;
+    @media only screen and(max-width: $small-device) {
+        padding-top: 15rem;
+    }
+    & .slideshow-container {
+        position: relative;
+
+        & .slide {
+            display: none;
+        }
+    }
+}
+
+.text__section {
+    padding: $padding-large;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all .5s ease;
+    @media only screen and(max-width: $small-device) {
+        padding: 5rem 0rem;
+    }
+
+    & .wrapper {
+        @include start-col;
+        width: 50%;
+
+        @media only screen and(max-width: $small-device) {
+            width: 90%;
+        }
+    }
+}
+
+.selected-projects {
+    padding: $padding-large;
+    overflow: hidden;
+
+    @media only screen and(max-width: $small-device) {
+        padding: 5rem 0rem;
+    }
+
+    & .wrapper {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    & .container {
+        margin-top: 10rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &__item {
+            width: 56rem;
+            transition: all .5s ease;
+            opacity: 0;
+            overflow: hidden;
+
+
+            &:not(:last-child) {
+                margin-right: 5rem;
+            }
+
+            & img {
+                height: 100%;
+                width: 58rem;
+                object-fit: cover;
+                transition: all .5s ease;
+                transform: translateX(-2rem);
+            }
+
+            &:hover img {
+                transform: translateX(0rem);
+            }
+        }
+    }
+
+}
+
+.link-section {
+    padding: $padding-large;
+
+    @media only screen and(max-width: $small-device) {
+        padding: 5rem 0rem;
+    }
+    & .wrapper {
+        @include center;
+
+        @media only screen and(max-width: $small-device) {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
+    & a {
+        &:not(:last-child) {
+            margin-right: 10rem;
+
+            @media only screen and(max-width: $small-device) {
+                &:not(:last-child) {
+                    margin-right: 0rem;
+                    margin-bottom: 5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+.header {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 85;
+    width: 100%;
+    padding: 3.5rem 0rem;
+
+    & .wrapper {
+        @include space-center;
+    }
+}
+
+.menu {
+    height: 2.7rem;
+    width: 7.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+
+    &--line {
+        height: .3rem;
+        width: 100%;
+        background-color: $black;
+        transition: $transition;
+
+        &:last-child {
+            width: 65%;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &:hover .menu--line:first-child {
+        width: 65%;
+    }
+
+    &:hover .menu--line:last-child {
+        width: 100%;
+    }
+}
+
+.menu--active {
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    display: none;
+
+    &--line {
+        background-color: $white;
+        height: 3px;
+        width: 100%;
+
+        &--1 {
+            transform: rotate(45deg) translateY(0px);
+            margin: 20px 0px 0px 0px;
+        }
+
+        &--2 {
+            transform: rotate(-45deg) translateY(-2px) 
+        }
+    }
+}
