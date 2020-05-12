@@ -23,7 +23,8 @@ a {
 .wrapper {
     display: flex;
     margin: 0px auto;
-    width: 1200px;
+    width: 1320px;
+    max-width: 1650px;
 
     @media only screen and(max-width: $small-device) {
         width: 90%;

@@ -1,0 +1,45 @@
+.projects {
+
+    &__hero {
+        height: 90%;
+        width: 100%;
+
+        @media only screen and(max-width: $small-device) {
+            padding: 10rem 0rem;
+        }
+
+        & .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+
+            @media only screen and(max-width: $small-device) {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        & .buttons__container {
+            & a:first-child {
+                margin-right: 5rem;
+
+                @media only screen and(max-width: $small-device) {
+                    margin-right: 0rem;
+                    margin-bottom: 2.5rem;
+                }
+            }
+        }
+    }
+
+    &__highlights {
+        padding-bottom: 10rem;
+
+        & .wrapper {
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
+}
