@@ -26,6 +26,10 @@
         background-color: $black;
         transition: $transition;
 
+        &--white {
+            background-color: $white;
+        }
+
         &:last-child {
             width: 65%;
         }
