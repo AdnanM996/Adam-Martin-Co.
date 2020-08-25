@@ -187,6 +187,74 @@
     }
 }
 
+.about {
+    & .grid {
+        width: 100%;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(9, auto);
+
+        &__item {
+
+            &:not(:last-child) {
+                margin-bottom: 20rem;
+            }
+
+            & img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            &--1 {
+                grid-column: 3 / -1;
+                grid-row: 1 / 2;
+            }
+
+            &--2 {
+                grid-column: 3 / 9;
+                grid-row: 2 / 3;
+            }
+
+            &--3 {
+                grid-column: 4 / 10;
+                grid-row: 3 / 4;
+            }
+
+            &--4 {
+                grid-column: 1 / 9;
+                grid-row: 4 / 5;
+            }
+
+            &--5 {
+                grid-column: 4 / 10;
+                grid-row: 5 / 6;
+            }
+
+            &--6 {
+                grid-column: 3 / 9;
+                grid-row: 6 / 7;
+            }
+
+            &--7 {
+                grid-column: 3 / -1;
+                grid-row: 7 / 8;
+            }
+
+            &--8 {
+                grid-column: 3 / 9;
+                grid-row: 8 / 9;
+            }
+
+            &--9 {
+                grid-column: 1 / -1;
+                grid-row: 9 / 10;
+            }
+        }
+    }
+}
+
+
+
 .contact {
     & .grid {
         width: 100%;

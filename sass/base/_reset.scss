@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     height: 100%;
@@ -37,4 +41,8 @@ img {
 
 .fade-in {
     animation: fadeIn .7s ease;
+}
+
+.handle {
+    cursor: grab;
 }

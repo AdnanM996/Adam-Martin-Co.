@@ -6,7 +6,7 @@
     <title>Home Page &#8212; A&M</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body id="home">
 <header class="header">
     <div class="wrapper">
 
@@ -73,49 +73,53 @@
     </div><!--end wrapper-->
 </section><!--end text__section-->
 
+<section>
+    <div class="wrapper">
+        <h2 class="selected-projects--heading">selected projects</h2>
+    </div>
+</section>
+
 <section class="selected-projects">
     <div class="wrapper">
-        <h2>selected projects</h2>
 
         <div class="container">
 
             <div class="container__item">
-                <a href="#"><img src="images/img1.jpg" alt=""></a>
+                <img src="images/img1.jpg" alt="">
                 <a href="#" class="cta">project 1</a>
             </div>
-
+        
             <div class="container__item">
-                <a href="#"><img src="images/img2.jpg" alt=""></a>
+                <img src="images/img2.jpg" alt="">
                 <a href="#" class="cta">project 2</a>
             </div>
-
+        
             <div class="container__item">
-                <a href="#"><img src="images/img3.jpg" alt=""></a>
+                <img src="images/img3.jpg" alt="">
                 <a href="#" class="cta">project 3</a>
             </div>
-
+        
             <div class="container__item">
-                <a href="#"><img src="images/img4.jpg" alt=""></a>
+                <img src="images/img4.jpg" alt="">
                 <a href="#" class="cta">project 4</a>
             </div>
-
+        
             <div class="container__item">
-                <a href="#"><img src="images/img5.jpg" alt=""></a>
+                <img src="images/img5.jpg" alt="">
                 <a href="#" class="cta">project 5</a>
             </div>
-
+        
             <div class="container__item">
-                <a href="#"><img src="images/img6.jpg" alt=""></a>
+                <img src="images/img6.jpg" alt="">
                 <a href="#" class="cta">project 6</a>
             </div>
-
+        
             <div class="container__item">
-                <a href="#"><img src="images/img7.jpg" alt=""></a>
+                <img src="images/img7.jpg" alt="">
                 <a href="#" class="cta">project 7</a>
             </div>
-
+        
         </div><!--end container-->
-
     </div><!--end wrapper-->
 </section>
 
@@ -163,38 +167,11 @@
             <li><a href="index.html">home</a></li>
             <li><a href="projects.html">projects</a></li>
             <li><a href="process.html">process</a></li>
-            <li><a href="#">about</a></li>
+            <li><a href="about.html">about</a></li>
             <li><a href="contact.html">contact</a></li>
         </ul>
     </div>
 </nav>
 <script src="js/index.js"></script>
-<script>
-
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        let slides = document.querySelectorAll('.slide');
-
-        for(let i = 0; i < slides.length; i++) {
-            slides[i].style.display = 'none';
-        }
-
-        slideIndex++;
-
-        if(slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-
-        slides[slideIndex - 1].style.display = 'block';
-        setTimeout(showSlides, 5000);
-    }
-
-    let container = document.querySelector('.selected-projects .container');
-    let containerItems = document.querySelectorAll('.selected-projects .container__item');
-
-    
-</script>
 </body>
 </html>

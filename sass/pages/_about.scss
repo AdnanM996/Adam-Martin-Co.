@@ -1,0 +1,11 @@
+.about__intro {
+    height: 90%;
+    margin-top: 12rem;
+    padding: $padding-large;
+
+    & .wrapper {
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+    }
+}

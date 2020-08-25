@@ -21,7 +21,7 @@
         }
 
         & aside {
-            padding-right: 15rem;
+            padding: 15rem 15rem 0rem 0rem;
 
             @media only screen and(max-width: $small-device) {
                 display: none;
@@ -74,5 +74,9 @@
             flex-direction: column;
         }
     } // Section
+}
 
+.sticky {
+    position: sticky;
+    top: 0rem;
 }
