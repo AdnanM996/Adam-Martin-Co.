@@ -1,9 +1,6 @@
 .hero {
-    overflow: hidden;
-    padding-top: 7.5rem;
-    @media only screen and(max-width: $small-device) {
-        padding-top: 15rem;
-    }
+    padding: 12.5rem 0rem 10rem 0rem;
+
     & .slideshow-container {
         position: relative;
 
@@ -18,9 +15,14 @@
     opacity: 0;
     transform: translateY(50%);
     transition: all .5s ease;
+
     @media only screen and(max-width: $small-device) {
         padding: 5rem 0rem;
     }
+
+    /*@media only screen and(max-width: $medium-device){
+        background-color: rebeccapurple;
+    }*/
 
     & .wrapper {
         @include start-col;
@@ -29,7 +31,15 @@
         @media only screen and(max-width: $small-device) {
             width: 90%;
         }
+
+        @media only screen and(max-width: $medium-device){
+            width: 90%;
+        }
     }
+}
+
+.selected {
+    padding-top: 10rem;
 }
 
 .selected-projects {
@@ -50,6 +60,7 @@
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         height: 45rem;
+        padding-right: 5rem;
     
         &__item {
             width: 56rem;
@@ -87,9 +98,16 @@
         @include center;
 
         @media only screen and(max-width: $small-device) {
-            align-items: flex-start;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            & .cta {
+                &:not(:last-child) {
+                    margin: 0;
+                }
+            }
         }
+
     }
 
     & a {

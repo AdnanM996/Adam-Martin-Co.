@@ -10,8 +10,9 @@
 
         & .wrapper {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
             height: 100%;
 
             @media only screen and(max-width: $small-device) {
@@ -21,12 +22,13 @@
         }
 
         & .buttons__container {
-            & a:first-child {
-                margin-right: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-                @media only screen and(max-width: $small-device) {
-                    margin-right: 0rem;
-                    margin-bottom: 2.5rem;
+            & .cta {
+                &:not(:last-child) {
+                    margin-right: 5rem;
                 }
             }
         }
@@ -45,8 +47,13 @@
 
 }
 
-#row-1, #row-2, #row-3 {
+.project {
     opacity: 0;
-    transform: translateY(100%);
-    transition: all .7s ease-in;
+    transform: translateX(-7.5rem);
+    transition: all .3s ease;
+
+    &--visible {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
 }

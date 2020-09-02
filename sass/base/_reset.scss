@@ -31,7 +31,7 @@ img {
 .wrapper {
     display: flex;
     margin: 0px auto;
-    width: 1320px;
+    width: 90%;
     max-width: 1650px;
 
     @media only screen and(max-width: $small-device) {

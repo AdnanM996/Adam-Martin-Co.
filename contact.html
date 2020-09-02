@@ -6,11 +6,11 @@
     <title>Contact &#8212; A&M</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body id="contact">
     <header class="header">
         <div class="wrapper">
     
-            <a href="index.html" class="logo logo--white">A &amp; M CO.</a>
+            <a href="index.html" class="logo">A &amp; M CO.</a>
            
             <div class="menu">
                 <div class="menu--line menu--line--white"></div>
@@ -25,47 +25,36 @@
         </div><!--end wrapper-->
     </header>
 
-    <section class="contact">
+    <section class="contact--intro">
         <div class="wrapper">
+            <h1 class="heading heading--big">Say Hello</h1>
+            <p>Toronto, Haliburton and Palm Springs.</p>
+        </div>
 
-            <div class="grid">
-
-                <div class="grid__item grid__item--1">
-                    <h1 class="heading heading--big">Say Hello</h1>
-                    <p>Toronto, Haliburton and Palm Springs.</p>
+        <div class="grid">
+            <div class="grid__item grid__item--1">
+                <div class="contact__info">
+                    <p class="name">Adam Parker</p>
+                    <a href="mailto:#" class="email">adam@gmail.com</a>
+                    <p class="phone">+123 456 789</p>
                 </div>
-
-                <div class="grid__item grid__item--2">
-                    <div class="contact__info">
-                        <p class="name">Adam Parker</p>
-                        <a href="mailto:#" class="email">adam@gmail.com</a>
-                        <p class="phone">+123 456 789</p>
-                    </div>
-        
-                    <div class="contact__info">
-                        <p class="name">Martin Rhodes</p>
-                        <a href="mailto:#" class="email">martin@gmail.com</a>
-                        <p class="phone">+123 456 789</p>
-                    </div>
+    
+                <div class="contact__info">
+                    <p class="name">Martin Rhodes</p>
+                    <a href="mailto:#" class="email">martin@gmail.com</a>
+                    <p class="phone">+123 456 789</p>
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <section class="contact__img">
-        <div class="wrapper">
-            <div class="grid">
-                <div class="grid__item">
-                    <img src="images/img1.jpg" alt="">
-                </div>
+            <div class="grid__item grid__item--2">
+                <img src="images/img1.jpg" alt="">
             </div>
         </div>
-    </section>
+</section>
 
 <footer class="footer">
     <div class="wrapper">
-        <div class="footer--bottom">
+        <div class="footer--contact">
             <p>&copy; Copyright <span id="year"></span> A&M</p>
             <p>All right reserved.</p>
         </div>
@@ -83,7 +72,6 @@
         </ul>
     </div>
 </nav>    
-
 <script src="js/index.js"></script>
 </body>
 </html>

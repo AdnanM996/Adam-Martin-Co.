@@ -21,24 +21,31 @@ window.addEventListener('scroll', () => {
     }
 });
 
-menu.addEventListener('click', () => {
-    nav.classList.add('nav--open');
 
+function openNavigation() {
+    menu.addEventListener('click', () => {
+        nav.classList.add('nav--open');
+    
+            menu.style.display = 'none';
+            menuActive.style.display = 'block';
+    
+            for(let i = 0; i < listItems.length; i++) {
+                setTimeout(() => {
+                    listItems[i].style.opacity = '1';
+                    listItems[i].style.transform = 'translateY(0%)';
+                }, i * 150);
+            }
+    });
+}
+
+function changeLogo() {
+    menu.addEventListener('click', () => {
         logo.classList.replace('logo--black', 'logo--white');
         for(i = 0; i < menuLines.length; i++) {
             menuLines[i].style.backgroundColor = '#fff';
         }
-
-        menu.style.display = 'none';
-        menuActive.style.display = 'block';
-
-        for(let i = 0; i < listItems.length; i++) {
-            setTimeout(() => {
-                listItems[i].style.opacity = '1';
-                listItems[i].style.transform = 'translateY(0%)';
-            }, i * 150);
-        }
-});
+    });
+}
 
 menuActive.addEventListener('click', () => {
     nav.classList.remove('nav--open');
@@ -60,8 +67,13 @@ menuActive.addEventListener('click', () => {
         }
 });
 
+
 //Home Animations 
 if(document.body.id === 'home') {
+
+openNavigation();
+changeLogo();
+
 const imgSlider = document.querySelector('.hero .grid__item--2');
 const textSection = document.querySelector('.text__section');
 const selectedProjects = document.querySelector('.selected-projects');
@@ -151,30 +163,22 @@ slider.addEventListener('mousemove', (e) => {
 
 if(document.body.id === 'projects') {
 
-    const rowContainer1 = document.querySelector('.row__container--1');
-    const rowContainer2 = document.querySelector('.row__container--2');
-    const rowContainer3 = document.querySelector('.row__container--3');
+    openNavigation();
+    changeLogo();
 
-    const row1 = document.querySelector('#row-1');
-    const row2 = document.querySelector('#row-2');
-    const row3 = document.querySelector('#row-3');
+    let projectsHighlights = document.querySelector('.projects__highlights');
+    let project = document.querySelectorAll('.project');
+    console.log(project);
 
     window.addEventListener('scroll', () => {
         let wScroll = window.pageYOffset;
 
-        if(wScroll > 50) {
-            row1.style.opacity = '1';
-            row1.style.transform = 'translateY(0%)';
-        }
-
-        if(wScroll > (rowContainer2.offsetTop / 3.5)) {
-            row2.style.opacity = '1';
-            row2.style.transform = 'translateY(0%)';
-        }
-
-        if(wScroll > (rowContainer3.offsetTop / 3.5)) {
-            row3.style.opacity = '1';
-            row3.style.transform = 'translateY(0%)';
+        if(wScroll > (projectsHighlights.offsetTop / 3.5)) {
+            for(let i = 0; i < project.length; i++) {
+                setTimeout(() => {
+                    project[i].classList.add('project--visible');
+                }, i * 500);
+            }
         }
     });
 }
@@ -183,6 +187,8 @@ if(document.body.id === 'projects') {
 
 if(document.body.id === 'process') {
 
+    openNavigation();
+    changeLogo();
 
     window.addEventListener('scroll', () => {
         let wScroll = window.pageYOffset;
@@ -200,24 +206,9 @@ if(document.body.id === 'process') {
         const AMComponents = document.querySelector('#AMComponents');
         const theBuild = document.querySelector('#thebuild');
 
-        /*const text = document.querySelectorAll('.process--text');
-        const img = document.querySelectorAll('.process--img');*/
-
         if(wScroll = (processItems.offsetTop / 1)) {
             aside.classList.add('sticky');
         }
-
-        /*if(wScroll = (siteDiscovery.offsetTop / 1)) {
-            textImgAnimation();
-        }
-
-        if(wScroll > budgetAnalysis.offsetTop) {
-            textImgAnimation();
-        }
-
-        if(wScroll > constructionDocumentacion.offsetTop) {
-            textImgAnimation();
-        }*/
 
         asideLinks.forEach(link => {
             let section = document.querySelector(link.hash);
@@ -231,4 +222,14 @@ if(document.body.id === 'process') {
 
 
     });
+}
+
+if(document.body.id === 'about') {
+    openNavigation();
+    changeLogo();
+}
+
+if(document.body.id === 'contact') {
+    openNavigation();
+    logo.style.color = '#fff';
 }
