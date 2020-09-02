@@ -232,4 +232,24 @@ if(document.body.id === 'about') {
 if(document.body.id === 'contact') {
     openNavigation();
     logo.style.color = '#fff';
+
+    menuActive.addEventListener('click', () => {
+        nav.classList.remove('nav--open');
+        nav.classList.remove('nav--open');
+    
+        menu.style.display = 'block';
+        menuActive.style.display = 'none';
+    
+        logo.classList.replace('logo--white', 'logo--black');
+            for(i = 0; i < menuLines.length; i++) {
+                menuLines[i].style.backgroundColor = '#fff';
+            }
+    
+            for(let i = 0; i < listItems.length; i++) {
+                setTimeout(() => {
+                    listItems[i].style.opacity = '0';
+                    listItems[i].style.transform = 'translateY(-100%)';
+                }, i * 150);
+            }
+    });
 }
